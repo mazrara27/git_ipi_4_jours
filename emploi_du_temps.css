@@ -1,6 +1,6 @@
 .premier_ligne {
     
-    background-color: darkblue;
+    background-color: rgb(6, 6, 138);
     color: white;
 }
 table{
@@ -12,7 +12,8 @@ padding: 10px;
 text-align: center;
 }
 .pause_déjeuner{
-    background-color: red;
+    background-color: rgb(160, 7, 7);
     color: white;
-    
+    text-transform: uppercase;
+    text-decoration-style: solid;
 }
