@@ -1,0 +1,114 @@
+[
+  {
+    "idCommande": "#CMD-2001",
+    "client": "Thomas Dubois",
+    "avatarUrl": "https://ui-avatars.com/api/?name=Thomas+Dubois&background=0D6EFD&color=fff",
+    "date": "19 Mars 2026",
+    "montant": "149.99",
+    "statut": "Payée"
+  },
+  {
+    "idCommande": "#CMD-2002",
+    "client": "Camille Martin",
+    "avatarUrl": "https://ui-avatars.com/api/?name=Camille+Martin&background=E0A800&color=fff",
+    "date": "18 Mars 2026",
+    "montant": "89.50",
+    "statut": "En attente"
+  },
+  {
+    "idCommande": "#CMD-2003",
+    "client": "Lucas Petit",
+    "avatarUrl": "https://ui-avatars.com/api/?name=Lucas+Petit&background=DC3545&color=fff",
+    "date": "17 Mars 2026",
+    "montant": "299.00",
+    "statut": "Annulée"
+  },
+  {
+    "idCommande": "#CMD-2004",
+    "client": "Sophie Leroy",
+    "avatarUrl": "https://ui-avatars.com/api/?name=Sophie+Leroy&background=198754&color=fff",
+    "date": "16 Mars 2026",
+    "montant": "45.20",
+    "statut": "Payée"
+  },
+  {
+    "idCommande": "#CMD-2005",
+    "client": "Jean Dupont",
+    "avatarUrl": "https://ui-avatars.com/api/?name=Jean+Dupont&background=94656E&color=fff",
+    "date": "15 Mars 2026",
+    "montant": "75.00",
+    "statut": "Payée"
+  },
+  {
+    "idCommande": "#CMD-2006",
+    "client": "Isabelle Leclerc",
+    "avatarUrl": "https://ui-avatars.com/api/?name=Isabelle+Leclerc&background=7C68B7&color=fff",
+    "date": "14 Mars 2026",
+    "montant": "99.99",
+    "statut": "En attente"
+  },
+  {
+    "idCommande": "#CMD-2007",
+    "client": "Pierre Beaumont",
+    "avatarUrl": "https://ui-avatars.com/api/?name=Pierre+Beaumont&background=FF0000&color=fff",
+    "date": "13 Mars 2026",
+    "montant": "35.50",
+    "statut": "Payée"
+  },
+  {
+    "idCommande": "#CMD-2008",
+    "client": "Alice Garcia",
+    "avatarUrl": "https://ui-avatars.com/api/?name=Alice+Garcia&background=8B8B8B&color=fff",
+    "date": "12 Mars 2026",
+    "montant": "62.33",
+    "statut": "En attente"
+  },
+  {
+    "idCommande": "#CMD-2009",
+    "client": "Michel Rousseau",
+    "avatarUrl": "https://ui-avatars.com/api/?name=Michel+Rousseau&background=344244&color=fff",
+    "date": "11 Mars 2026",
+    "montant": "58.78",
+    "statut": "Payée"
+  },
+  {
+    "idCommande": "#CMD-2010",
+    "client": "Emma Dubois",
+    "avatarUrl": "https://ui-avatars.com/api/?name=Emma+Dubois&background=E0A800&color=fff",
+    "date": "10 Mars 2026",
+    "montant": "72.11",
+    "statut": "En attente"
+  },
+  {
+    "idCommande": "#CMD-2011",
+    "client": "Paul Moreau",
+    "avatarUrl": "https://ui-avatars.com/api/?name=Paul+Moreau&background=8B8B8B&color=fff",
+    "date": "9 Mars 2026",
+    "montant": "68.55",
+    "statut": "Payée"
+  },
+  {
+    "idCommande": "#CMD-2012",
+    "client": "Lea Dupont",
+    "avatarUrl": "https://ui-avatars.com/api/?name=Lea+Dupont&background=0D6EFD&color=fff",
+    "date": "8 Mars 2026",
+    "montant": "51.22",
+    "statut": "En attente"
+  },
+  {
+    "idCommande": "#CMD-2013",
+    "client": "Antoine Leclerc",
+    "avatarUrl": "https://ui-avatars.com/api/?name=Antoine+Leclerc&background=DC3545&color=fff",
+    "date": "7 Mars 2026",
+    "montant": "83.90",
+    "statut": "Payée"
+  },
+  {
+    "idCommande": "#CMD-2014",
+    "client": "Chloé Martin",
+    "avatarUrl": "https://ui-avatars.com/api/?name=Chloé+Martin&background=E0A800&color=fff",
+    "date": "6 Mars 2026",
+    "montant": "37.17",
+    "statut": "En attente"
+  }
+]

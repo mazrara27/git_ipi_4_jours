@@ -1,0 +1,22 @@
+[
+  {
+    "nom": "Sophie Martin",
+    "role": "Admin Système",
+    "avatarUrl": "https://ui-avatars.com/api/?name=Sophie+Martin&background=random"
+  },
+  {
+    "nom": "Lucas Petit",
+    "role": "Éditeur",
+    "avatarUrl": "https://ui-avatars.com/api/?name=Lucas+Petit&background=random"
+  },
+  {
+    "nom": "Emma Rousseau",
+    "role": "Lecteur",
+    "avatarUrl": "https://ui-avatars.com/api/?name=Emma+Rousseau&background=random"
+  },
+  {
+    "nom": "Marc Dupont",
+    "role": "Éditeur",
+    "avatarUrl": "https://ui-avatars.com/api/?name=Marc+Dupont&background=random"
+  }
+]

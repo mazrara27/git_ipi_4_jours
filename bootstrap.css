@@ -1,0 +1,37 @@
+/* Style spécifique pour la sidebar sur PC et Mobile */
+.sidebar {
+  width: 280px;
+  min-height: 100vh;
+}
+
+.nav-link.active {
+  background-color: #0d6efd !important;
+}
+
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Sur mobile, la sidebar passe au-dessus et prend 100% */
+@media screen and (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    min-height: auto;
+  }
+}
+
+/* Styles pour les avatars */
+.avatar {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.table-avatar {
+  width: 35px;
+  height: 35px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 10px;
+}

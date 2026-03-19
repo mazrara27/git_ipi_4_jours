@@ -1,0 +1,13 @@
+{
+  "stats": {
+    "ventesMois": "+ 850 €",
+    "nouveauxInscrits": 215,
+    "traficSite": "18.2 K"
+  },
+  "objectifs": [
+    { "nom": "Ventes", "pourcentage": 60, "couleur": "bg-success" },
+    { "nom": "Marketing", "pourcentage": 25, "couleur": "bg-warning text-dark" },
+    { "nom": "SAV", "pourcentage": 15, "couleur": "bg-danger" }
+  ],
+  "notes": "Penser à relancer le fournisseur pour les stocks. La campagne promo se termine ce week-end !"
+}

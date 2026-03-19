@@ -3,113 +3,128 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Admin Dashboard Pro</title>
+    <title>Admin Dashboard Pro Dynamique</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-    <style>
-      /* Style spécifique pour la sidebar sur PC et Mobile */
-      .sidebar {
-        width: 280px;
-        min-height: 100vh;
-      }
-      .nav-link.active {
-        background-color: #0d6efd !important;
-      }
-      .nav-link:hover {
-        background-color: rgba(255, 255, 255, 0.1);
-      }
-      /* Sur mobile, la sidebar passe au-dessus et prend 100% */
-      @media screen and (max-width: 768px) {
-        .sidebar {
-          width: 100%;
-          min-height: auto;
-        }
-      }
-      .avatar {
-        width: 50px;
-        height: 50px;
-        object-fit: cover;
-        border-radius: 50%;
-      }
-    </style>
+    <link href="bootstrap.css" rel="stylesheet" />
   </head>
   <body>
-    <div class="d-flex flex-column flex-md-row min-vh-100 bg-light">
-      <nav class="sidebar bg-dark text-white p-3 d-flex flex-column">
-        <a
-          href="#"
-          class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none"
-        >
-          <span class="fs-4 fw-bold">🚀 AdminPanel</span>
-        </a>
-        <hr />
-        <ul
-          class="nav nav-pills flex-column mb-auto"
-          id="pills-tab"
-          role="tablist"
-        >
-          <li class="nav-item" role="presentation">
-            <button
-              class="nav-link text-white active w-100 text-start"
-              id="pills-dashboard-tab"
-              data-bs-toggle="pill"
-              data-bs-target="#pills-dashboard"
-              type="button"
-              role="tab"
-              aria-controls="pills-dashboard"
-              aria-selected="true"
-            >
-              📊 Dashboard
-            </button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button
-              class="nav-link text-white w-100 text-start"
-              id="pills-ventes-tab"
-              data-bs-toggle="pill"
-              data-bs-target="#pills-ventes"
-              type="button"
-              role="tab"
-              aria-controls="pills-ventes"
-              aria-selected="false"
-            >
-              🛒 Ventes
-            </button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button
-              class="nav-link text-white w-100 text-start"
-              id="pills-utilisateurs-tab"
-              data-bs-toggle="pill"
-              data-bs-target="#pills-utilisateurs"
-              type="button"
-              role="tab"
-              aria-controls="pills-utilisateurs"
-              aria-selected="false"
-            >
-              👥 Utilisateurs
-            </button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button
-              class="nav-link text-white w-100 text-start"
-              id="pills-parametres-tab"
-              data-bs-toggle="pill"
-              data-bs-target="#pills-parametres"
-              type="button"
-              role="tab"
-              aria-controls="pills-parametres"
-              aria-selected="false"
-            >
-              ⚙️ Paramètres
-            </button>
-          </li>
-          </li>
-          
-          <hr class="text-white-50"> 
+    <div
+      id="login-screen"
+      class="min-vh-100 d-flex align-items-center justify-content-center bg-dark"
+    >
+      <div class="card p-4 shadow-lg" style="width: 100%; max-width: 400px">
+        <div class="card-body">
+          <div class="text-center mb-4">
+            <h2>🚀 AdminPanel</h2>
+            <p class="text-muted">Veuillez vous connecter</p>
+          </div>
 
+          <div class="alert alert-danger d-none" id="login-error">
+            Identifiants incorrects.
+          </div>
+
+          <form id="login-form">
+            <div class="mb-3">
+              <label class="form-label">Nom d'utilisateur</label>
+              <input
+                type="text"
+                id="username"
+                class="form-control"
+                placeholder="admin"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Mot de passe</label>
+              <input
+                type="password"
+                id="password"
+                class="form-control"
+                placeholder="admin"
+                required
+              />
+            </div>
+            <button type="submit" class="btn btn-primary w-100">
+              Se connecter
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div id="dashboard-screen" class="d-none">
+      <div class="d-flex flex-column flex-md-row min-vh-100 bg-light">
+        <nav class="sidebar bg-dark text-white p-3 d-flex flex-column">
+          <a
+            href="#"
+            class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none"
+          >
+            <span class="fs-4 fw-bold">🚀 AdminPanel</span>
+          </a>
+          <hr />
+          <ul
+            class="nav nav-pills flex-column mb-auto"
+            id="pills-tab"
+            role="tablist"
+          >
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link text-white active w-100 text-start"
+                data-bs-toggle="pill"
+                data-bs-target="#pills-dashboard"
+                type="button"
+                role="tab"
+              >
+                📊 Dashboard
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link text-white w-100 text-start"
+                data-bs-toggle="pill"
+                data-bs-target="#pills-ventes"
+                type="button"
+                role="tab"
+              >
+                🛒 Ventes
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link text-white w-100 text-start"
+                data-bs-toggle="pill"
+                data-bs-target="#pills-utilisateurs"
+                type="button"
+                role="tab"
+              >
+                👥 Utilisateurs
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link text-white w-100 text-start"
+                data-bs-toggle="pill"
+                data-bs-target="#pills-parametres"
+                type="button"
+                role="tab"
+              >
+                ⚙️ Paramètres
+              </button>
+            </li>
+            <hr class="text-white-50" />
+            <li class="nav-item">
+              <button
+                id="btn-logout"
+                class="nav-link text-danger w-100 text-start"
+              >
+                🚪 Déconnexion
+              </button>
+            </li>
+            </li>
+          <hr class="text-white-50"> 
           <li class="nav-item">
             <a href="accueil.html" class="nav-link text-white w-100 text-start">
               🏠 Retour à l'accueil
@@ -117,381 +132,119 @@
           </li>
         </ul>
       </nav>
+          </ul>
+          
+        </nav>
 
-      <main class="flex-grow-1 p-4 tab-content" id="pills-tabContent">
-        <div
-          class="tab-pane fade show active"
-          id="pills-dashboard"
-          role="tabpanel"
-          aria-labelledby="pills-dashboard-tab"
-        >
-          <nav aria-label="breadcrumb">
-            <ol class="breadcrumb bg-white p-2 rounded shadow-sm">
-              <li class="breadcrumb-item"><a href="#">Accueil</a></li>
-              <li class="breadcrumb-item active" aria-current="page">
-                Dashboard
-              </li>
-            </ol>
-          </nav>
-
-          <div class="row mt-4">
-            <div class="col-md-4 mb-3">
-              <div class="card text-white bg-danger shadow-sm h-100">
-                <div class="card-body">
-                  <h5 class="card-title">Ventes (Mois)</h5>
-                  <p class="card-text display-6 fw-bold">+ 500 €</p>
+        <main class="flex-grow-1 p-4 tab-content" id="pills-tabContent">
+          <div
+            class="tab-pane fade show active"
+            id="pills-dashboard"
+            role="tabpanel"
+          >
+            <h2 class="mb-4">Dashboard</h2>
+            <div class="row mt-4">
+              <div class="col-md-4 mb-3">
+                <div class="card text-white bg-danger shadow-sm h-100">
+                  <div class="card-body">
+                    <h5 class="card-title">Ventes (Mois)</h5>
+                    <p class="card-text display-6 fw-bold" id="stat-ventes">
+                      ...
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 mb-3">
+                <div class="card text-dark bg-warning shadow-sm h-100">
+                  <div class="card-body">
+                    <h5 class="card-title">Nouveaux Inscrits</h5>
+                    <p class="card-text display-6 fw-bold" id="stat-inscrits">
+                      ...
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 mb-3">
+                <div class="card text-white bg-success shadow-sm h-100">
+                  <div class="card-body">
+                    <h5 class="card-title">Trafic Site</h5>
+                    <p class="card-text display-6 fw-bold" id="stat-trafic">
+                      ...
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="col-md-4 mb-3">
-              <div class="card text-dark bg-warning shadow-sm h-100">
-                <div class="card-body">
-                  <h5 class="card-title">Nouveaux Inscrits</h5>
-                  <p class="card-text display-6 fw-bold">142</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 mb-3">
-              <div class="card text-white bg-success shadow-sm h-100">
-                <div class="card-body">
-                  <h5 class="card-title">Trafic Site</h5>
-                  <p class="card-text display-6 fw-bold">12.5 K</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="row mt-4">
-            <div class="col-lg-8 mb-4">
-              <div class="card shadow-sm p-4 h-100">
-                <h5 class="mb-4">Objectifs de la semaine</h5>
-                <div class="progress-stacked" style="height: 30px">
+            <div class="row mt-4">
+              <div class="col-lg-8 mb-4">
+                <div class="card shadow-sm p-4 h-100">
+                  <h5 class="mb-4">Objectifs de la semaine</h5>
                   <div
-                    class="progress"
-                    role="progressbar"
-                    style="width: 40%"
-                    aria-valuenow="40"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  >
-                    <div
-                      class="progress-bar progress-bar-striped progress-bar-animated bg-success"
-                    >
-                      Ventes (40%)
-                    </div>
-                  </div>
-                  <div
-                    class="progress"
-                    role="progressbar"
-                    style="width: 30%"
-                    aria-valuenow="30"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  >
-                    <div
-                      class="progress-bar progress-bar-striped progress-bar-animated bg-warning text-dark"
-                    >
-                      Marketing (30%)
-                    </div>
-                  </div>
-                  <div
-                    class="progress"
-                    role="progressbar"
-                    style="width: 15%"
-                    aria-valuenow="15"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  >
-                    <div
-                      class="progress-bar progress-bar-striped progress-bar-animated bg-danger"
-                    >
-                      SAV (15%)
-                    </div>
-                  </div>
+                    class="progress-stacked"
+                    style="height: 30px"
+                    id="objectifs-container"
+                  ></div>
                 </div>
               </div>
-            </div>
-
-            <div class="col-lg-4 mb-4">
-              <div class="card shadow-sm p-4 h-100">
-                <h5 class="mb-3">Notes Rapides</h5>
-                <p class="text-secondary">
-                  Ne pas oublier d'envoyer la newsletter de vendredi. Vérifier
-                  les stocks pour le Black Friday.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div
-          class="tab-pane fade"
-          id="pills-ventes"
-          role="tabpanel"
-          aria-labelledby="pills-ventes-tab"
-        >
-          <h2 class="mb-4">Historique des Ventes</h2>
-          <div class="card shadow-sm">
-            <div class="card-body">
-              <div class="table-responsive">
-                <table class="table table-hover align-middle">
-                  <thead class="table-light">
-                    <tr>
-                      <th>ID Commande</th>
-                      <th>Client</th>
-                      <th>Date</th>
-                      <th>Montant</th>
-                      <th>Statut</th>
-                      <th>Action</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>#CMD-1024</td>
-                      <td>Jean Dupont</td>
-                      <td>19 Mars 2026</td>
-                      <td><strong>149,99 €</strong></td>
-                      <td><span class="badge bg-success">Payée</span></td>
-                      <td>
-                        <button class="btn btn-sm btn-outline-primary">
-                          Voir
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>#CMD-1025</td>
-                      <td>Marie Curie</td>
-                      <td>18 Mars 2026</td>
-                      <td><strong>89,50 €</strong></td>
-                      <td>
-                        <span class="badge bg-warning text-dark"
-                          >En attente</span
-                        >
-                      </td>
-                      <td>
-                        <button class="btn btn-sm btn-outline-primary">
-                          Voir
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>#CMD-1026</td>
-                      <td>Alan Turing</td>
-                      <td>17 Mars 2026</td>
-                      <td><strong>299,00 €</strong></td>
-                      <td><span class="badge bg-danger">Annulée</span></td>
-                      <td>
-                        <button class="btn btn-sm btn-outline-primary">
-                          Voir
-                        </button>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <nav aria-label="Page navigation">
-                <ul class="pagination justify-content-end mb-0">
-                  <li class="page-item disabled">
-                    <a class="page-link" href="#">Précédent</a>
-                  </li>
-                  <li class="page-item active">
-                    <a class="page-link" href="#">1</a>
-                  </li>
-                  <li class="page-item"><a class="page-link" href="#">2</a></li>
-                  <li class="page-item">
-                    <a class="page-link" href="#">Suivant</a>
-                  </li>
-                </ul>
-              </nav>
-            </div>
-          </div>
-        </div>
-
-        <div
-          class="tab-pane fade"
-          id="pills-utilisateurs"
-          role="tabpanel"
-          aria-labelledby="pills-utilisateurs-tab"
-        >
-          <div class="d-flex justify-content-between align-items-center mb-4">
-            <h2>Gestion des Utilisateurs</h2>
-            <button
-              class="btn btn-primary"
-              data-bs-toggle="modal"
-              data-bs-target="#addUserModal"
-            >
-              + Ajouter
-            </button>
-          </div>
-
-          <div class="row">
-            <div class="col-md-6 col-lg-4 mb-4">
-              <div class="card shadow-sm h-100 text-center p-3">
-                <img
-                  src="https://ui-avatars.com/api/?name=Sophie+Martin&background=random"
-                  class="avatar mx-auto mb-3"
-                  alt="Sophie"
-                />
-                <h5 class="card-title mb-1">Sophie Martin</h5>
-                <p class="text-muted small mb-3">Admin Système</p>
-                <div class="d-grid gap-2">
-                  <button class="btn btn-outline-secondary btn-sm">
-                    Éditer profil
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-4 mb-4">
-              <div class="card shadow-sm h-100 text-center p-3">
-                <img
-                  src="https://ui-avatars.com/api/?name=Lucas+Petit&background=random"
-                  class="avatar mx-auto mb-3"
-                  alt="Lucas"
-                />
-                <h5 class="card-title mb-1">Lucas Petit</h5>
-                <p class="text-muted small mb-3">Éditeur</p>
-                <div class="d-grid gap-2">
-                  <button class="btn btn-outline-secondary btn-sm">
-                    Éditer profil
-                  </button>
+              <div class="col-lg-4 mb-4">
+                <div class="card shadow-sm p-4 h-100">
+                  <h5 class="mb-3">Notes Rapides</h5>
+                  <p class="text-secondary" id="notes-rapides">...</p>
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <div
-          class="tab-pane fade"
-          id="pills-parametres"
-          role="tabpanel"
-          aria-labelledby="pills-parametres-tab"
-        >
-          <h2 class="mb-4">Paramètres de l'Application</h2>
-          <div class="row">
-            <div class="col-lg-6 mb-4">
-              <div class="card shadow-sm p-4">
-                <h5 class="mb-3">Préférences Générales</h5>
-                <form>
-                  <div class="mb-3">
-                    <label for="siteName" class="form-label">Nom du site</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="siteName"
-                      value="Mon Super E-commerce"
-                    />
-                  </div>
-                  <div class="mb-3">
-                    <label for="currency" class="form-label"
-                      >Devise par défaut</label
-                    >
-                    <select class="form-select" id="currency">
-                      <option selected>Euro (€)</option>
-                      <option>Dollar ($)</option>
-                      <option>Livre (£)</option>
-                    </select>
-                  </div>
-                  <hr />
-                  <h6 class="mb-3">Notifications</h6>
-                  <div class="form-check form-switch mb-2">
-                    <input
-                      class="form-check-input"
-                      type="checkbox"
-                      role="switch"
-                      id="notifEmail"
-                      checked
-                    />
-                    <label class="form-check-label" for="notifEmail"
-                      >Emails pour les nouvelles ventes</label
-                    >
-                  </div>
-                  <div class="form-check form-switch mb-3">
-                    <input
-                      class="form-check-input"
-                      type="checkbox"
-                      role="switch"
-                      id="notifUser"
-                    />
-                    <label class="form-check-label" for="notifUser"
-                      >Alertes nouveaux inscrits</label
-                    >
-                  </div>
-                  <button type="submit" class="btn btn-success w-100">
-                    Sauvegarder les modifications
-                  </button>
-                </form>
+          <div class="tab-pane fade" id="pills-ventes" role="tabpanel">
+            <h2 class="mb-4">Historique des Ventes</h2>
+            <div class="card shadow-sm">
+              <div class="card-body">
+                <div class="table-responsive">
+                  <table class="table table-hover align-middle">
+                    <thead class="table-light">
+                      <tr>
+                        <th>ID</th>
+                        <th>Client</th>
+                        <th>Date</th>
+                        <th>Montant</th>
+                        <th>Statut</th>
+                        <th>Action</th>
+                      </tr>
+                    </thead>
+                    <tbody id="sales-table-body"></tbody>
+                  </table>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </main>
-    </div>
 
-    <div
-      class="modal fade"
-      id="addUserModal"
-      tabindex="-1"
-      aria-labelledby="addUserModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="addUserModalLabel">
-              Nouvel Utilisateur
-            </h5>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body">
-            <form>
-              <div class="mb-3">
-                <label class="form-label">Nom complet</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="Ex: Thomas Dubois"
-                />
+          <div class="tab-pane fade" id="pills-utilisateurs" role="tabpanel">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+              <h2>Gestion des Utilisateurs</h2>
+              <button
+                class="btn btn-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#addUserModal"
+              >
+                + Ajouter
+              </button>
+            </div>
+            <div class="row" id="users-container">
+              <div class="col-12 text-center text-muted">
+                <div class="spinner-border" role="status"></div>
               </div>
-              <div class="mb-3">
-                <label class="form-label">Adresse Email</label>
-                <input
-                  type="email"
-                  class="form-control"
-                  placeholder="thomas@example.com"
-                />
-              </div>
-              <div class="mb-3">
-                <label class="form-label">Rôle</label>
-                <select class="form-select">
-                  <option selected>Sélectionner un rôle</option>
-                  <option value="1">Admin</option>
-                  <option value="2">Éditeur</option>
-                  <option value="3">Lecteur seul</option>
-                </select>
-              </div>
-            </form>
+            </div>
           </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-bs-dismiss="modal"
-            >
-              Annuler
-            </button>
-            <button type="button" class="btn btn-primary">
-              Créer le compte
-            </button>
+
+          <div class="tab-pane fade" id="pills-parametres" role="tabpanel">
+            <h2 class="mb-4">Paramètres</h2>
+            <p>Ici vont vos paramètres...</p>
           </div>
-        </div>
+        </main>
       </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="bootstrap.js"></script>
   </body>
 </html>
