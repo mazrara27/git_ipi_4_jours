@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navigation JSON</title>
+
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: #f4f4f9;
+        padding: 40px;
+      }
+      .container {
+        max-width: 500px;
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+      h2 {
+        color: #333;
+        border-bottom: 2px solid #007bff;
+        padding-bottom: 10px;
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+      }
+      li {
+        margin: 10px 0;
+      }
+      a {
+        text-decoration: none;
+        color: #007bff;
+        font-size: 1.1rem;
+        text-transform: capitalize;
+      }
+      a:hover {
+        text-decoration: underline;
+        color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>📂 Mes Pages</h2>
+      <ul id="menu">
+        <li>Chargement des liens...</li>
+      </ul>
+    </div>
+
+    <script>
+      async function loadMenu() {
+        const menuElement = document.getElementById("menu");
+
+        try {
+          const response = await fetch("links.json");
+          if (!response.ok) throw new Error("Fichier JSON non trouvé");
+
+          const data = await response.json();
+          menuElement.innerHTML = ""; // On vide le message de chargement
+
+          // Le script PowerShell peut renvoyer un objet seul ou un tableau
+          const files = Array.isArray(data) ? data : [data];
+
+          files.forEach((file) => {
+            const li = document.createElement("li");
+            const a = document.createElement("a");
+            a.href = file.Name;
+            // On nettoie le nom pour l'affichage (ex: "ma-page.html" -> "ma page")
+            a.textContent = file.Name.replace(".html", "").replace(/-/g, " ");
+
+            li.appendChild(a);
+            menuElement.appendChild(li);
+          });
+        } catch (error) {
+          menuElement.innerHTML = `<li style="color:red">Erreur : Exécutez d'abord le script PowerShell pour générer links.json.</li>`;
+          console.error(error);
+        }
+      }
+
+      loadMenu();
+    </script>
+  </body>
+</html>

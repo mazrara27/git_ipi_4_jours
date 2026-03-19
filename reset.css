@@ -1,0 +1,15 @@
+/* reset.css */
+*, *::before, *::after {
+    box-sizing: border-box; /* Essentiel pour gérer les largeurs/paddings facilement */
+    margin: 0;
+    padding: 0;
+}
+
+ul, ol {
+    list-style: none; /* Enlève les puces par défaut */
+}
+
+a {
+    text-decoration: none; /* Enlève le soulignement par défaut des liens */
+    color: inherit;
+}

@@ -1,0 +1,35 @@
+.box {
+  height: 200px;
+  width: 200px;
+
+}
+ 
+#noir {
+  background: #222;
+  border: 15px solid #000;
+}
+ 
+#vert {
+  background: #292;
+  border: 15px solid #070;
+}
+ 
+#rouge {
+  background: #922;
+  border: 15px solid #700;
+}
+ 
+#bleu {
+  background: #229;
+  border: 15px solid #007;
+}
+
+@media screen (max-width: 1200px;) {
+    body{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+}
+    

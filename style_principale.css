@@ -1,0 +1,82 @@
+/* style_principale.css */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f8f9fa;
+}
+
+main {
+    flex: 1;
+}
+
+/* --- Header & Footer --- */
+header, footer {
+    background-color: #0A192F;
+    color: white;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+nav {
+    display: flex;
+    gap: 20px; /* Remplace les margin-left pour un espacement plus propre */
+}
+
+nav a {
+    color: white; /* Force la couleur du texte en blanc */
+    text-decoration: none; /* Enlève le soulignement natif de Bootstrap */
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+/* Le survol reste identique, mais tu as maintenant une bonne base */
+nav a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* --- Animations --- */
+.hover-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.hover-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0px 10px 30px rgba(0,0,0,0.2);
+}
+
+.btn-custom {
+    transition: transform 0.3s;
+}
+
+.btn-custom:hover {
+    transform: scale(1.1);
+}
+
+/* --- Responsive (Mobile) --- */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column; /* Empile le logo et le menu */
+        gap: 15px;
+    }
+    
+    nav {
+        flex-direction: column; /* Empile les liens de navigation */
+        align-items: center;
+        width: 100%;
+        gap: 10px;
+    }
+
+    header, footer {
+        background-color: #2669ce;
+    }
+}

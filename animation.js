@@ -1,6 +1,6 @@
 const btn = document.getElementById("btn");
 
-btn.addEventListener("click", () => {
+btn.addEventListener("mouseover", () => {
     const maxX = window.innerWidth - btn.offsetWidth;
     const maxY = window.innerHeight - btn.offsetHeight;
 
