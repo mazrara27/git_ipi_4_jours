@@ -1,0 +1,56 @@
+[
+  {
+    "id": "One",
+    "question": "Quels sont vos tarifs pour une prestation ?",
+    "answer": "Mes tarifs s'adaptent à la complexité de votre projet. Je fonctionne principalement sur devis après un premier échange pour bien cerner vos besoins."
+  },
+  {
+    "id": "Two",
+    "question": "Quelles technologies utilisez-vous principalement ?",
+    "answer": "Je suis un développeur Fullstack : côté front-end j'utilise HTML, CSS, JavaScript (Bootstrap), et côté back-end j'utilise PHP."
+  },
+  {
+    "id": "Three",
+    "question": "Combien de temps prend la réalisation d'un site web ?",
+    "answer": "Le délai dépend de l'ampleur du projet. Une landing page peut prendre une semaine, tandis qu'une application complète peut nécessiter plusieurs mois."
+  },
+  {
+    "id": "Four",
+    "question": "Mon site sera-t-il adapté aux mobiles ?",
+    "answer": "Absolument. Tous mes projets sont développés avec une approche 'Mobile First' pour garantir une expérience parfaite sur tous les écrans."
+  },
+  {
+    "id": "Five",
+    "question": "Proposez-vous une maintenance après la mise en ligne ?",
+    "answer": "Oui, je propose des contrats de maintenance pour assurer les mises à jour de sécurité et l'évolution technique de votre plateforme."
+  },{
+    "id": "Six",
+    "question": "Quels outils de collaboration utilisez-vous pour le travail d'équipe ?",
+    "answer": "Je suis très familiarisé avec Figma, Miro, Slack, Asana et Jira, qui sont tous utilisés pour faciliter la collaboration et la gestion des tâches d'équipe."
+  },
+  {
+    "id": "Seven",
+    "question": "Quel est votre style de conception ?",
+    "answer": "J'adopte une approche centrée sur l'utilisateur, avec un souci constant du design intuitif et une expérience utilisateur optimisée. Je privilégie des interfaces claires et une navigation simple."
+  },
+  {
+    "id": "Eight",
+    "question": "Êtes-vous capable de travailler en équipe avec des méthodes Agile ?",
+    "answer": "Absolument. Je suis à l'aise avec les principes Agile, notamment la Scrum, et je suis capable de participer activement à la planification, au suivi et à l'amélioration continue des projets."
+  },
+  {
+    "id": "Nine",
+    "question": "Quelles plateformes de stockage cloud utilisez-vous ?",
+    "answer": "Je suis habitué à des plateformes comme AWS S3, Google Cloud Storage et Azure Blob Storage, pour garantir la sécurité et la disponibilité de mes données."
+  },
+  {
+    "id": "Ten",
+    "question": "Comment vous assurez-vous de la qualité du code ?",
+    "answer": "Je mets en place des tests automatisés (unitaires, d'intégration, de performance) et des revues de code régulières pour identifier et corriger les erreurs avant la mise en production. Je suis également un fervent défenseur du code propre et du code bien documenté."
+  },
+  {
+    "id": "Eleven",
+    "question": "Quelles sont vos préférences en matière de communication ?",
+    "answer": "Je crois en la communication claire, concise et proactive.  J'utilise principalement des outils de messagerie et des réunions régulières pour maintenir un contact constant avec mes clients et mes collègues."
+  }
+]
