@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #111;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    text-align: center;
+}
+
+/* Bouton de base */
+.btn {
+    position: absolute; /* IMPORTANT pour le déplacer */
+    padding: 20px 40px;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    background: crimson;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+/* Animation au survol */
+.btn:hover {
+    background: orange;
+    transform: scale(1.2) rotate(5deg);
+}
+
+/* Animation quand on clique */
+.btn:active {
+    animation: shake 0.4s;
+}
+
+/* Animation personnalisée */
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    50% { transform: translateX(10px); }
+    75% { transform: translateX(-10px); }
+    100% { transform: translateX(0); }
+}
